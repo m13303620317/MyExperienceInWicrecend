@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="MyExperienceInWicrecend.Page1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyExperienceInWicrecend"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:MyExperienceInWicrecend.Models"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Margin="20,20,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Name="Date"
+                   Text="10月16日"
+                   FontSize="48" />
+        <GridView ItemsSource="{x:Bind Transportations}"
+                  Grid.Row="1"
+                  Grid.Column="1">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="data:Transportation">
+                    <StackPanel>
+                        <Image Source="{x:Bind PicturePath}" />
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+        <GridView ItemsSource="{x:Bind Transportations}"
+                  Grid.Row="2"
+                  Grid.ColumnSpan="2">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="data:Transportation">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="我从" TextWrapping="Wrap" FontSize="18" />
+                            <TextBlock Text="{x:Bind StartingPoint}" Foreground="Red" TextWrapping="Wrap" FontSize="18" />
+                            <TextBlock Text="来到了" TextWrapping="Wrap" FontSize="18" />
+                            <TextBlock Text="{x:Bind EndingPoint}" Foreground="Red" TextWrapping="Wrap" FontSize="18" />
+                            <TextBlock Text="，乘坐" TextWrapping="Wrap" FontSize="18" />
+                            <TextBlock Text="{x:Bind Mode}" Foreground="Red" TextWrapping="Wrap" FontSize="18" />
+                            <TextBlock Text="来到了这里。" TextWrapping="Wrap" FontSize="18" />
+                        </StackPanel>
+                        <TextBlock Text="{x:Bind Remarks}" Foreground="Red" TextWrapping="Wrap" FontSize="18" />
+                    </StackPanel>
+                </DataTemplate>
+            </GridView.ItemTemplate>
+        </GridView>
+        <StackPanel Grid.Row="2"
+                    Grid.Column="2">
+            <Button x:Name="ComeToTheCompany" Content="何时来到了公司？" Click="ComeToTheCompany_Click" FontSize="18" />
+        </StackPanel>
+    </Grid>
+</Page>

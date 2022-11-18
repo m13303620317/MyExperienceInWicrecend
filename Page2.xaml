@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="MyExperienceInWicrecend.Page2"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyExperienceInWicrecend"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:MyExperienceInWicrecend.Models"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid Margin="20,20,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Name="Date"
+                   Text="10月17日"
+                   FontSize="48" />
+        <Image Source="Assets/wicrecend.png"
+               Grid.Row="1"
+               Grid.Column="1" />
+        <TextBlock FontSize="18"
+                   Grid.Row="2"
+                   Grid.ColumnSpan="2"
+                   TextWrapping="Wrap">
+            今天我来到了公司附近，也见识到了软件园是什么样的。当我看到园区的地图时，发现了园区是很大的，就像是一个小区。
+            园区中有很多的公司，有的是看到名字就很熟悉的公司，有的是看过官方网站后觉得很不错的公司。
+            今天主要从人事那里得到了房卡，我在无锡这个城市有了一个落脚点，希望我能够在无锡走得更远。
+        </TextBlock>
+
+        <Button x:Name="Report"
+                Content="到了正式报到的时间了"
+                Click="Report_Click"
+                FontSize="18"
+                Grid.Row="2"
+                Grid.Column="2" />
+    </Grid>
+</Page>
