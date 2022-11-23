@@ -26,5 +26,10 @@ namespace MyExperienceInWicrecend
         {
             this.InitializeComponent();
         }
+
+        private void DataBinding_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(SubPage7));
+        }
     }
 }

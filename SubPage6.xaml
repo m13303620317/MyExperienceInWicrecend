@@ -9,6 +9,264 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Narrow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="Title.FontSize" Value="36" />
+                        <Setter Target="Title.(Grid.ColumnSpan)" Value="6" />
+                        <Setter Target="Introduction.FontSize" Value="12" />
+                        <Setter Target="Introduction.(Grid.Row)" Value="1" />
+                        <Setter Target="Introduction.(Grid.ColumnSpan)" Value="6" />
+                        <Setter Target="StackPanelFirst.(Grid.Row)" Value="2" />
+                        <Setter Target="StackPanelFirst.(Grid.ColumnSpan)" Value="6" />
+                        <Setter Target="WicrecendTitle.FontSize" Value="24" />
+                        <Setter Target="WicrecendIntroduction.FontSize" Value="12" />
+                        <Setter Target="StackPanelSecond.(Grid.Row)" Value="3" />
+                        <Setter Target="StackPanelSecond.(Grid.ColumnSpan)" Value="6" />
+                        <Setter Target="SubTitle1.FontSize" Value="24" />
+                        <Setter Target="SubTitle1Content1.FontSize" Value="12" />
+                        <Setter Target="SubTitle1Content2.FontSize" Value="12" />
+                        <Setter Target="SubTitle1Content3.FontSize" Value="12" />
+                        <Setter Target="SubTitle1Content4.FontSize" Value="12" />
+                        <Setter Target="SubTitle1Content5.FontSize" Value="12" />
+                        <Setter Target="SubTitle1Content6.FontSize" Value="12" />
+                        <Setter Target="SubTitle1Content7.FontSize" Value="12" />
+                        <Setter Target="SubTitle1Content8.FontSize" Value="12" />
+                        <Setter Target="SubTitle1Content9.FontSize" Value="12" />
+                        <Setter Target="SubTitle1Content10.FontSize" Value="12" />
+                        <Setter Target="StackPanelThird.(Grid.Row)" Value="4" />
+                        <Setter Target="StackPanelThird.(Grid.ColumnSpan)" Value="6" />
+                        <Setter Target="SubTitle2.FontSize" Value="24" />
+                        <Setter Target="SubTitle2Content1.FontSize" Value="12" />
+                        <Setter Target="SubTitle2Content2.FontSize" Value="12" />
+                        <Setter Target="SubTitle2Content3.FontSize" Value="12" />
+                        <Setter Target="SubTitle2Content4.FontSize" Value="12" />
+                        <Setter Target="SubTitle2Content5.FontSize" Value="12" />
+                        <Setter Target="SubTitle2Content6.FontSize" Value="12" />
+                        <Setter Target="SubTitle2Content7.FontSize" Value="12" />
+                        <Setter Target="SubTitle2Content8.FontSize" Value="12" />
+                        <Setter Target="SubTitle2Content9.FontSize" Value="12" />
+                        <Setter Target="DataBinding.FontSize" Value="18" />
+                    </VisualState.Setters>
+                </VisualState>
 
+                <VisualState x:Name="Wide">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="Title.FontSize" Value="48" />
+                        <Setter Target="Title.(Grid.ColumnSpan)" Value="6" />
+                        <Setter Target="Introduction.FontSize" Value="18" />
+                        <Setter Target="Introduction.(Grid.Row)" Value="1" />
+                        <Setter Target="Introduction.(Grid.ColumnSpan)" Value="6" />
+                        <Setter Target="StackPanelFirst.(Grid.Row)" Value="2" />
+                        <Setter Target="StackPanelFirst.(Grid.ColumnSpan)" Value="2" />
+                        <Setter Target="WicrecendTitle.FontSize" Value="32" />
+                        <Setter Target="WicrecendIntroduction.FontSize" Value="18" />
+                        <Setter Target="StackPanelSecond.(Grid.Row)" Value="2" />
+                        <Setter Target="StackPanelSecond.(Grid.Column)" Value="2" />
+                        <Setter Target="StackPanelSecond.(Grid.ColumnSpan)" Value="2" />
+                        <Setter Target="SubTitle1.FontSize" Value="32" />
+                        <Setter Target="SubTitle1Content1.FontSize" Value="18" />
+                        <Setter Target="SubTitle1Content2.FontSize" Value="18" />
+                        <Setter Target="SubTitle1Content3.FontSize" Value="18" />
+                        <Setter Target="SubTitle1Content4.FontSize" Value="18" />
+                        <Setter Target="SubTitle1Content5.FontSize" Value="18" />
+                        <Setter Target="SubTitle1Content6.FontSize" Value="18" />
+                        <Setter Target="SubTitle1Content7.FontSize" Value="18" />
+                        <Setter Target="SubTitle1Content8.FontSize" Value="18" />
+                        <Setter Target="SubTitle1Content9.FontSize" Value="18" />
+                        <Setter Target="SubTitle1Content10.FontSize" Value="18" />
+                        <Setter Target="StackPanelThird.(Grid.Row)" Value="2" />
+                        <Setter Target="StackPanelThird.(Grid.Column)" Value="4" />
+                        <Setter Target="StackPanelThird.(Grid.ColumnSpan)" Value="2" />
+                        <Setter Target="SubTitle2.FontSize" Value="32" />
+                        <Setter Target="SubTitle2Content1.FontSize" Value="18" />
+                        <Setter Target="SubTitle2Content2.FontSize" Value="18" />
+                        <Setter Target="SubTitle2Content3.FontSize" Value="18" />
+                        <Setter Target="SubTitle2Content4.FontSize" Value="18" />
+                        <Setter Target="SubTitle2Content5.FontSize" Value="18" />
+                        <Setter Target="SubTitle2Content6.FontSize" Value="18" />
+                        <Setter Target="SubTitle2Content7.FontSize" Value="18" />
+                        <Setter Target="SubTitle2Content8.FontSize" Value="18" />
+                        <Setter Target="SubTitle2Content9.FontSize" Value="18" />
+                        <Setter Target="DataBinding.FontSize" Value="24" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <ScrollViewer>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock x:Name="Title"
+                           Text="响应式布局"
+                           Margin="20,20,0,0" />
+                
+                <TextBlock x:Name="Introduction"
+                           Margin="20,20,0,0"
+                           TextWrapping="Wrap">
+                    响应式布局主要是为了适应多个终端而做的不同版本。
+                    但是并不是说需要用多个项目制作，而是用一个项目来实现多个多个不同效果的页面。
+                    这时，响应式布局就会起到很大的作用。在本页面，调整页面的宽度来模拟不同的终端。
+                    可以发现字体，布局会产生变化。
+                </TextBlock>
+
+                <StackPanel x:Name="StackPanelFirst">
+                    <Image x:Name="WicrecendImage"
+                       Margin="20,20,0,0"
+                       Source="Assets/wicrecend.png" />
+
+                    <TextBlock x:Name="WicrecendTitle"
+                           Margin="20,20,0,0"
+                           Text="上海微创软件" />
+
+                    <TextBlock x:Name="WicrecendIntroduction"
+                           Margin="20,20,0,0"
+                           TextWrapping="Wrap">
+                    上海微创软件股份有限公司是一家全球数字化转型服务商，2002年由微软与上海市政府共同创办。
+                    微创始终秉承高标准的服务品质与“成就客户”的服务理念，全球设有20个交付中心，交付网络涵盖亚洲（日本，中国大陆和中国香港地区）、北美以及欧洲等国家和地区。
+                    </TextBlock>
+                </StackPanel>
+
+                <StackPanel x:Name="StackPanelSecond">
+                    <TextBlock x:Name="SubTitle1"
+                               Margin="20,20,0,0"
+                               Text="企业社会责任" />
+                    <TextBlock x:Name="SubTitle1Content1"
+                               Margin="20,20,0,0"
+                               TextWrapping="Wrap">
+                        微创始终相信，要想成为好企业，先要成为好公民。2002年，微创公司建立伊始即将企业社会责任上升到公司战略的高度，尽其所能为地区的经济增长和社会发展做出贡献。
+                        近年来，微创的业务获得全面提升，连续多年保持两位数年增长率，健康的财务状况是微创更好履行社会责任的必备条件。
+                    </TextBlock>
+                    <TextBlock x:Name="SubTitle1Content2"
+                               Margin="20,20,0,0"
+                               TextWrapping="Wrap">
+                        微创创立以来，一直履行对社会所承担的义务，以优秀企业公民作为立身之本，致力于为中国的经济增长和社会发展做出贡献。
+                        目前，微创在履行企业社会责任的重点集中在：商业道德、环境保护、公益事业以及员工权益四个方面。
+                    </TextBlock>
+                    <TextBlock x:Name="SubTitle1Content3"
+                               Margin="20,20,0,0"
+                               TextWrapping="Wrap">
+                        <Bold>企业责任与管理</Bold>
+                    </TextBlock>
+                    <TextBlock x:Name="SubTitle1Content4"
+                               Margin="20,20,0,0"
+                               TextWrapping="Wrap">
+                        微创企业公民形象是以高道德标准作为起点。维持客户的信任和忠诚，取决于诚实守信的经营原则。微创要求员工、合作伙伴和供应商在业务领域对自己的行为负责。
+                    </TextBlock>
+                    <TextBlock x:Name="SubTitle1Content5"
+                               Margin="20,20,0,0"
+                               TextWrapping="Wrap">
+                        <Bold>环保责任</Bold>
+                    </TextBlock>
+                    <TextBlock x:Name="SubTitle1Content6"
+                               Margin="20,20,0,0"
+                               TextWrapping="Wrap">
+                        微创致力于在为客户和社会提供环保的产品和服务，以降低对环境的影响，这与我们的客户对产品的高性能、低成本和环保功能的要求相一致，微创因此获得了潜在的竞争优势。
+                    </TextBlock>
+                    <TextBlock x:Name="SubTitle1Content7"
+                               Margin="20,20,0,0"
+                               TextWrapping="Wrap">
+                        <Bold>社会投入与参与</Bold>
+                    </TextBlock>
+                    <TextBlock x:Name="SubTitle1Content8"
+                               Margin="20,20,0,0"
+                               TextWrapping="Wrap">
+                        微创企业公民形象的第三个支柱是社会投入与参与。微创的奠基人在他们营利的第一年就开始了传统的社会投入。
+                        今天微创公司通过服务、资金以及员工的行动，继续在中国的各个地方进行社会投入。
+                    </TextBlock>
+                    <TextBlock x:Name="SubTitle1Content9"
+                               Margin="20,20,0,0"
+                               TextWrapping="Wrap">
+                        <Bold>员工权益</Bold>
+                    </TextBlock>
+                    <TextBlock x:Name="SubTitle1Content10"
+                               Margin="20,20,0,0"
+                               TextWrapping="Wrap">
+                        公司企业文化多元化，具有更大的包容性，才能更好地招贤纳士，让员工将自己的梦想和公司的目标紧密结合，实现最大程度的公司发展和个人提升。
+                        因此，我们通过各种途径，促使员工真正融入到公司的文化中。
+                    </TextBlock>
+                </StackPanel>
+
+                <StackPanel x:Name="StackPanelThird">
+                    <TextBlock x:Name="SubTitle2"
+                               Margin="20,20,0,0"
+                               Text="公司历史" />
+                    <TextBlock x:Name="SubTitle2Content1"
+                               Margin="20,20,0,0"
+                               TextWrapping="Wrap">
+                        2002年上海微创软件有限公司创立
+                    </TextBlock>
+                    <TextBlock x:Name="SubTitle2Content2"
+                               Margin="20,20,0,0"
+                               TextWrapping="Wrap">
+                        2005年成为国家规划布局内重点软件企业
+                    </TextBlock>
+                    <TextBlock x:Name="SubTitle2Content3"
+                               Margin="20,20,0,0"
+                               TextWrapping="Wrap">
+                        2005年荣获中国杰出IT外包服务贡献奖
+                    </TextBlock>
+                    <TextBlock x:Name="SubTitle2Content4"
+                               Margin="20,20,0,0"
+                               TextWrapping="Wrap">
+                        2005年8月，微创在日本东京设立分支机构
+                    </TextBlock>
+                    <TextBlock x:Name="SubTitle2Content5"
+                               Margin="20,20,0,0"
+                               TextWrapping="Wrap">
+                        2007年起相继在美国西雅图、芝加哥与达拉斯设立北美分支机构
+                    </TextBlock>
+                    <TextBlock x:Name="SubTitle2Content6"
+                               Margin="20,20,0,0"
+                               TextWrapping="Wrap">
+                        2008年被认定为高新技术企业
+                    </TextBlock>
+                    <TextBlock x:Name="SubTitle2Content7"
+                               Margin="20,20,0,0"
+                               TextWrapping="Wrap">
+                        2010年到2013年连续四年认定为中国服务外包企业20强
+                    </TextBlock>
+                    <TextBlock x:Name="SubTitle2Content8"
+                               Margin="20,20,0,0"
+                               TextWrapping="Wrap">
+                        2014年跃居2014 IAOP全球服务外包第32名
+                    </TextBlock>
+                    <TextBlock x:Name="SubTitle2Content9"
+                               Margin="20,20,0,0"
+                               TextWrapping="Wrap">
+                        2015年唐骏回归微创软件出任董事长
+                    </TextBlock>
+                    <Button x:Name="DataBinding"
+                            Content="数据绑定"
+                            Click="DataBinding_Click"
+                            Margin="20,20,0,0" />
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
     </Grid>
 </Page>
