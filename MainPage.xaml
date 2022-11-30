@@ -27,7 +27,7 @@
                     <GridView ItemsSource="{x:Bind Reporters}">
                         <GridView.ItemTemplate>
                             <DataTemplate x:DataType="data:Reporter">
-                                <TextBlock x:Name="Reporter" Text="{x:Bind Name}" FontSize="24" Margin="20,0,0,20" />
+                                <TextBlock x:Name="Reporter" Text="{x:Bind Name}" FontSize="24" Margin="20,0,0,20" Foreground="Red" />
                             </DataTemplate>
                         </GridView.ItemTemplate>
                     </GridView>

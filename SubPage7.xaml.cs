@@ -57,7 +57,7 @@ namespace MyExperienceInWicrecend
 
         private void Toast_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(SubPage8));
         }
     }
 }

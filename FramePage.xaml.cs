@@ -48,25 +48,5 @@ namespace MyExperienceInWicrecend
                 MyFrame.GoForward();
             }
         }
-
-        private void WriteButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void RedButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void BlueButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void GreenButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
     }
 }

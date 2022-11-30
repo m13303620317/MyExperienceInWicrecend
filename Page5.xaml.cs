@@ -29,7 +29,7 @@ namespace MyExperienceInWicrecend
 
         private void Question_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(Page6));
         }
     }
 }
